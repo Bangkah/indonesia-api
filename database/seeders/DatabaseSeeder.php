@@ -15,11 +15,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        $this->call([
+            \Laravolt\Indonesia\Seeds\ProvincesSeeder::class,
+            \Laravolt\Indonesia\Seeds\CitiesSeeder::class,
+            \Laravolt\Indonesia\Seeds\DistrictsSeeder::class,
+            \Laravolt\Indonesia\Seeds\VillagesSeeder::class,
         ]);
     }
 }
